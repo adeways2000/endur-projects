@@ -46,8 +46,6 @@ The system models the \*\*full trade lifecycle\*\*, valuation, \*\*PnL\*\*, risk
 
 
 
-
-
 \## Architecture
 
 +------------------+
@@ -83,8 +81,6 @@ The system models the \*\*full trade lifecycle\*\*, valuation, \*\*PnL\*\*, risk
 +------------------+
 | REST API Layer   |
 +------------------+
-
-
 
 
 
