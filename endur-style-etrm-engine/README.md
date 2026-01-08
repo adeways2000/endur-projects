@@ -50,39 +50,40 @@ The system models the \*\*full trade lifecycle\*\*, valuation, \*\*PnL\*\*, risk
 
 \## Architecture
 
-External Input
++------------------+
+|  External Input  |
++--------+---------+
+         |
+         v
++------------------+        +--------------------+
+|  Trade Capture   | -----> | JVS-Style Scripts  |
++--------+---------+        | (Validation Rules) |
+         |                  +--------------------+
+         v
++------------------+
+| Trade Lifecycle  |  NEW → VALIDATED → PRICED → SETTLED
++--------+---------+
+         |
+         v
++------------------+        +------------------+
+| Market Data Feed | -----> | Pricing Service |
++--------+---------+        +------------------+
+         |
+         v
++------------------+
+| PnL & Risk Calc  |
++--------+---------+
+         |
+         v
++------------------+
+| EOD Batch Jobs   |
++--------+---------+
+         |
+         v
++------------------+
+| REST API Layer   |
++------------------+
 
-|
-
-Trade Capture
-
-|
-
-JVS-Style Validation
-
-|
-
-Trade Lifecycle (NEW → VALIDATED → PRICED → SETTLED)
-
-|
-
-Market Data Feed
-
-|
-
-Pricing \& Valuation
-
-|
-
-PnL \& Risk Calculation
-
-|
-
-EOD Batch Processing
-
-|
-
-REST API Integration
 
 
 
